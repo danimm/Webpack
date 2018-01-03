@@ -1,0 +1,32 @@
+{
+  "name": "curso-de-webpack",
+  "version": "1.0.0",
+  "description": "El curso de Webpack de Platzi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack index.js bundle.js",
+    "build:local": "webpack --config ./primer-bundle/webpack.config.js",
+    "build:external": "webpack --config ./external/webpack.config.js",
+    "build:css": "webpack --config ./css-style-loader/webpack.config.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danimm/Webpack.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Daniel Muñoz <danimm.dev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danimm/Webpack/issues"
+  },
+  "homepage": "https://github.com/danimm/Webpack#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0"
+  }
+}
