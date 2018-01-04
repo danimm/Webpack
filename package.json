@@ -8,8 +8,8 @@
     "build": "webpack index.js bundle.js",
     "build:local": "webpack --config ./primer-bundle/webpack.config.js",
     "build:external": "webpack --config ./external/webpack.config.js",
-    "build:css": "webpack --config ./css-style-loader/webpack.config.js"
-
+    "build:css": "webpack --config ./css-style-loader/webpack.config.js",
+    "build:extract:css": "webpack --config ./plugin-extract-text/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/danimm/Webpack#readme",
   "devDependencies": {
     "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0"
   }
