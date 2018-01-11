@@ -4,10 +4,10 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    vendor: [
-      'react',
-      'react-dom',
-    ],
+    // vendor: [
+    //   'react',
+    //   'react-dom',
+    // ],
     home: path.resolve(__dirname, 'src/js/index.js'),
     contact: path.resolve(__dirname, 'src/js/contact.js')
   },
@@ -115,9 +115,12 @@ module.exports = {
   plugins: [
     // aquí van los plugins
     new extractTextPlugin("css/[name].css"),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: Infinity,
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'vendor',
+    //   minChunks: Infinity,
+    // })
+    new webpack.DllReferencePlugin({
+      manifest: require("./modules-manifest.json")
     })
   ]
 }
